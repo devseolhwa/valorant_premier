@@ -55,6 +55,7 @@ $(document).ready(function(){
             initialSlide: 0, // 시작 위치 (0부터 시작)
             scrollbar : {
                 el : '.swiper-scrollbar',
+                dragSize: 48,
                 draggable: true,
             },
         });

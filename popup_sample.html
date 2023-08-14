@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <title>발로란트 프리미어</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+
+    <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lib/skrollr.min.js"></script>
+    <script src="assets/js/ScrambleTextPlugin.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/popup.js"></script>
+    
+</head>
+<body>
+
+    <!-- 라이엇바 상단 -->
+    <header id="riotbar-header"></header>
+    <header id="top-menu"></header>
+
+    <div class="wrap">
+
+        <div class="popupSample">
+            <!-- 
+                [전달사항] 팝업영역은 하단에 section으로 추가되어 있습니다.
+                modarOpen('') #값명과 하단의 section #값이 동일해야 합니다. 
+            -->
+            <button onclick="modarOpen('#modarEventShare');">이벤트 공유하기</button>
+            <button onclick="modarOpen('#modarLoginCheck');">로그인 전 [보상 확인]</button>
+            <button onclick="modarOpen('#modarTeamCheck');">팀 등록을 하지 않고 [보상 확인]</button>
+            <button onclick="modarOpen('#modarPlayCheck');">주간 대전을 하지 않고 [보상 확인]</button>
+            <button onclick="modarOpen('#modarComplete');">미션 완료 후 [보상 확인]</button>
+            <button onclick="modarOpen('#modarAgeCheck');">15세 미만 유저가 [보상 확인]</button>
+            <button onclick="modarOpen('#modarConsent');">이벤트 유의사항</button>
+            <button onclick="modarOpen('#modarRewardNone');">보상내역 없는 경우</button>
+            <button onclick="modarOpen('#modarReward');">보상내역 있는 경우</button>
+            <button onclick="scheduleToast();">즐겨찾기 URL 복사</button>
+            <button onclick="modarOpen('#modarCalendar');">캘린더보기</button>
+        </div>
+
+        <!-- 이벤트 공유하기 start -->
+        <section class="modarPopup md" id="modarEventShare">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <h3 class="popupTitleLg ta_l">이벤트<br />공유하기</h3>
+                        <!-- [전달사항] value 값에 복사할 url을 넣어주세요. -->
+                        <input type="text" value="복사할 url" id="inputUrl" style="display: block;height: 0;border: 0;overflow: hidden;text-indent: -9999px;white-space: nowrap;">
+                        <div class="shareBtnGroup">
+                            <button type="button" onclick="urlCopy();" class="shareUrl CloseModar"><span>url</span></button>
+                            <button type="button" class="shareKakao CloseModar"><span>카카오톡</span></button>
+                            <button type="button" class="shareFacebook CloseModar"><span>페이스북</span></button>
+                            <button type="button" class="shareTwitter CloseModar"><span>트위터</span></button>
+                        </div>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button> 
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 이벤트 공유하기 end -->
+
+        <!-- 로그인 전 [보상 확인] start -->
+        <section class="modarPopup md" id="modarLoginCheck">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <p class="popupTextLg">이벤트에 참여하시려면<br>로그인이 필요합니다.</p>
+                        <button type="button" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 로그인 전 [보상 확인] end -->
+
+        <!-- 팀 등록을 하지 않고 [보상 확인] start -->
+        <section class="modarPopup md" id="modarTeamCheck">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <p class="popupTextLg">팀 등록을 완료해 주세요.</p>
+                        <button type="button" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 팀 등록을 하지 않고 [보상 확인] end -->
+
+        <!-- 주간 대전을 하지 않고 [보상 확인] start -->
+        <section class="modarPopup md" id="modarPlayCheck">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <p class="popupTextLg">주간 대전 미션 수행 후<br>보상을 획득해 주세요.</p>
+                        <button type="button" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 주간 대전을 하지 않고 [보상 확인] end -->
+
+        <!-- 미션 완료 후 [보상 확인] start -->
+        <section class="modarPopup md" id="modarComplete">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <h3 class="popupTitleMd">미션 완료</h3>
+                        <p class="popupTextSm">레디어나이트 포인트 10개를<br>계정으로 바로 지급받으시겠습니까?</p>
+                        <button type="button" onclick="completedToast();" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 미션 완료 후 [보상 확인] end -->
+
+        <!-- 15세 미만 유저가 [보상 확인] start -->
+        <section class="modarPopup md" id="modarAgeCheck">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <p class="popupTextLg">15세 이상부터<br>이벤트에 참여 할 수 있습니다</p>
+                        <button type="button" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 15세 미만 유저가 [보상 확인] end -->
+
+        <!-- 이벤트 유의사항 start -->
+        <section class="modarPopup md" id="modarConsent">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <h3 class="popupTitleSm">이벤트 유의사항</h3>
+                        <div class="scrollBox">
+                            <h5 class="dotTitle">[팀 데스매치 이벤트 참여]</h5>
+                            <ul class="dotList">
+                                <li>본 이벤트는 만 15세 이상만 참여 가능합니다.</li>
+                                <li>사전 예약한 휴대전화와 계정을 연동하셨을 경우 이후 계정과 휴대전화 변경은 불가능합니다. (계정 연동은 1회만 가능)</li>
+                                <li>이벤트 기간이 종료되면 보유하신 ‘에피소드 7 : 에볼루션 카드’는 모두 소멸됩니다.</li>
+                                <li>이벤트 참여 또는 에피소드 7: 에볼루션 카드 획득 과정에서 서비스 약관 및 발로란트 운영정책을 위반하거나 기타 부정행위가 적발될 경우에 획득하신 에볼루션 카드 및 경품은 초기화 및 당첨 취소 등의 불이익이 발생할 수 있으며, 관련 규정에 따라 추가적인 이용제한 등의 불이익도 발생할 수 있습니다.</li>
+                            </ul>
+                            <h5 class="dotTitle">[경품 배송]</h5>
+                            <ul class="dotList">
+                                <li>경품은 국내 배송만 가능합니다.</li>
+                                <li>사이즈 선택이 필요한 경품에 당첨되셨을 경우 신청 순서에 따라 선착순으로 사이즈가 결정되며, 선착순 안에 들지 못하실 경우 사이즈는 랜덤으로 배송됩니다.</li>
+                                <li>부정확한 배송지 정보를 입력하여 경품이 반송되거나 수령하지 못하실 경우 변경 및 추가 지급은 불가능합니다.</li>
+                                <li>경품 획득 시 ‘경품 획득 내역’ 에서 배송지 입력 링크를 통해 안내된 기한 내 ‘개인정보제공동의’ 및 ‘배송지 정보’를 입력하지 않으면 자동으로 당첨이 취소됩니다.</li>
+                                <li>일부 경품(게이밍 기어 등)의 경우 제세공과금 신고를 위해 주민등록번호와 신분증 사본을 접수받고 있으며, 제출하신 주민등록번호 및 신분증 사본은 당첨된 계정의 명의와 일치해야 합니다. 제출해주신 주민등록번호 및 신분증 사본이 당첨된 계정의 명의와 일치하지 않을 경우 자동으로 당첨 취소되며, 추가적인 변경 절차는 없습니다.</li>
+                            </ul>
+                        </div>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>      
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 이벤트 유의사항 end -->
+
+        <!-- 보상내역 없는 경우 start -->
+        <section class="modarPopup md" id="modarRewardNone">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <p class="popupTextLg">보상 내역이 없습니다.</p>
+                        <button type="button" class="jsModarClose">확인</button>
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 보상내역 없는 경우 end -->
+
+        <!-- 보상내역 있는 경우 start -->
+        <section class="modarPopup lg" id="modarReward">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <ul class="rewardList">
+                            <li>
+                                <div class="text">
+                                    <p class="date"><span>2023. 3. 10 19:00</span><span>모든 미션 완료</span></p>
+                                    <p class="name">프리미어 팀 굿즈 응모</p>
+                                </div>
+                                <!-- [전달사항] .result 상태값 (완료/응모하기/응모마감/당첨/미당첨) -->
+                                <p class="result off">완료</p>
+                                <!-- 
+                                <p class="result on"><button type="button">응모하기</button></p>
+                                <p class="result end"><button type="button">응모마감</button></p>
+                                <p class="result win">// 당첨 //</p>
+                                <p class="result notwin">미당첨</p> 
+                                -->
+                            </li>
+                            <li>
+                                <div class="text">
+                                    <p class="date"><span>2023. 3. 10 19:00</span><span>주간대전 1회</span></p>
+                                    <p class="name">레디어나이트 포인트 10개</p>
+                                </div>
+                                <p class="result off">완료</p>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    <p class="date"><span>2023. 3. 10 19:00</span><span>주간대전 1회</span></p>
+                                    <p class="name">레디어나이트 포인트 10개</p>
+                                </div>
+                                <p class="result off">완료</p>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    <p class="date"><span>2023. 3. 10 19:00</span><span>프리미어 팀 등록</span></p>
+                                    <p class="name">레디어나이트 포인트 10개</p>
+                                </div>
+                                <p class="result off">완료</p>
+                            </li>
+                        </ul><!-- rewardList end -->
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button>      
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 보상내역 있는 경우 end -->
+
+        <!-- 캘린더보기 start -->
+        <section class="modarPopup full" id="modarCalendar">
+            <div class="modarCenter">
+                <div class="modarInner">
+                    <div class="modarBody">
+                        <img src="assets/images/img_schedule.jpg" alt="">
+                    </div><!-- modarBody end -->
+                    <button type="button" class="btnCloseModar">닫기</button> 
+                </div><!-- modarInner end -->
+            </div><!-- modarCenter end -->
+        </section>
+        <!-- 캘린더보기 end -->
+
+        <div id="urlToast" class="toast "><div id="desc">URL이 복사되었습니다.</div></div>
+        <div id="completedToast" class="toast "><div id="desc">계정으로 지급 완료되었습니다.</div></div>
+        <div id="scheduleToast" class="toast "><div id="desc">주간대전 스케줄 URL이 복사 되었습니다.</div></div>
+
+    </div><!-- wrap end -->
+
+    <!-- 라이엇바 하단 -->
+    <footer id="riotbar-footer"></footer>
+    <script defer="defer" src="https://cdn.rgpub.io/public/live/riotbar/latest/kr-valorant-evergreen.ko_KR.js"></script><!-- 라이엇바 상하단 js -->
+    
+</body>
+</html>

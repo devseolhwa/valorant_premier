@@ -67,7 +67,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .visualSection .btnLineBottom:after{content: "";position: absolute;bottom: -1px;right: 0;width: 45px;height: 45px;border-bottom: 2px solid #EBE8E1;border-right: 2px solid #EBE8E1;}
 .visualSection .btnEventJoin {position: relative;overflow: hidden;width: 362px;height: 82px;margin: 8px;background: #EBE8E1;font-size: 24px;color: #121212;line-height: 100%;font-weight: 700;letter-spacing: 2.4px;text-align: center;}
 .visualSection .btnEventJoin span {position: relative;}
-.visualSection .btnEventJoin .bgHover {display: block;position: absolute;top: 0;width: 120%;height: 100%;left: -5%;background: #C29E73;-webkit-transform: translateX(-100%) skew(-10deg);transform: translateX(-100%) skew(-10deg);-webkit-transition: -webkit-transform .5s ease-out;transition: -webkit-transform .5s ease-out;transition: transform .5s ease-out;transition: transform .5s ease-out,-webkit-transform .5s ease-out;}
+.visualSection .btnEventJoin .bgHover {display: block;position: absolute;top: -2%;width: 120%;height: 104%;left: -5%;background: #C29E73;-webkit-transform: translateX(-100%) skew(-10deg);transform: translateX(-100%) skew(-10deg);-webkit-transition: -webkit-transform .5s ease-out;transition: -webkit-transform .5s ease-out;transition: transform .5s ease-out;transition: transform .5s ease-out,-webkit-transform .5s ease-out;}
 .visualSection .btnEventJoin:hover .bgHover {-webkit-transform: translateX(0) skew(10deg);transform: translateX(0) skew(10deg);}
 
 .successSection {position: relative;background-color: #121212;background-image: url(../images/bg_success.png);background-position: center;background-size: cover;background-repeat: no-repeat;}
@@ -99,7 +99,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .scheduleTitle .btnCalendar{margin-left: 15px;padding: 9px 18px;border-radius: 28px;background: #C29E73;border: 1px solid #C29E73;box-sizing: border-box;font-size: 16px;color: #2E3030;font-weight: 700;line-height: 100%;-webkit-transition: .5s;transition: .5s;}
 .scheduleTitle .btnCalendar:before{content: "";display: inline-block;width: 24px;height: 24px;margin-right: 7px;background-image: url(../images/icon_calendar.png);background-size: 24px;background-repeat: no-repeat;vertical-align: -5px;-webkit-transition: .5s;transition: .5s;}
 .scheduleTitle .btnCalendar:hover{background: #DDD3C7;border-color: #DDD3C7;}
-.scheduleSlider{min-width: 1280px;}
+.scheduleSlider{width: 1280px;margin: 0 auto;}
 .scheduleSlider .swiper-wrapper{/* justify-content: center; */}
 .scheduleSlider .swiper-slide{width: 302px;}
 .scheduleSlider .swiper-slide .week{position: relative;margin-bottom: 19px;font-size: 24px;color: #C29E73;font-weight: 700;line-height: 160%;letter-spacing: 4.8px;text-transform: uppercase;font-family: "PP Supply Mono";text-align: center;}

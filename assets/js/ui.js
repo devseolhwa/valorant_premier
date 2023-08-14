@@ -49,8 +49,8 @@ $(document).ready(function(){
             slidesPerView: "auto", // 보여줄 개수
             spaceBetween: 24, // 슬라이드 사이 여백
             freeMode: false,
-            slidesOffsetBefore: 350, // 첫번째 여백
-            slidesOffsetAfter: 350, // 두번째 여백
+            //slidesOffsetBefore: 640, // 첫번째 여백
+            //slidesOffsetAfter: 640, // 두번째 여백
             allowTouchMove: true,
             initialSlide: 0, // 시작 위치 (0부터 시작)
             scrollbar : {

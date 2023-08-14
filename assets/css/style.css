@@ -104,7 +104,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .scheduleSlider .swiper-slide{width: 302px;}
 .scheduleSlider .swiper-slide .week{position: relative;margin-bottom: 19px;font-size: 24px;color: #C29E73;font-weight: 700;line-height: 160%;letter-spacing: 4.8px;text-transform: uppercase;font-family: "PP Supply Mono";text-align: center;}
 .scheduleSlider .swiper-slide + .swiper-slide .week:before{content: "";position: absolute;left: -86px;top: 13px;width: 156px;height: 4px;background: #856B4D;}
-.scheduleSlider .swiper-slide .card{position: relative;width: 302px;height: 414px;padding: 0 29px 23px;border: 1px solid #C29E73;box-sizing: border-box;background: rgba(0, 0, 0, 0.40);backdrop-filter: blur(7.5px);}
+.scheduleSlider .swiper-slide .card{position: relative;width: 302px;height: 414px;padding: 0 29px 23px;border: 1px solid #C29E73;box-sizing: border-box;background: rgba(0, 0, 0, 0.40);backdrop-filter: blur(7.5px);-webkit-backdrop-filter: blur(7.5px);}
 .scheduleSlider .swiper-slide .card .title{padding-top: 24px;border-top: 7px solid #C29E73;box-sizing: border-box;font-size: 60px;color: #C29E73;font-weight: 400;line-height: 100%;font-family: "Black Han Sans";}
 .scheduleSlider .swiper-slide .card .title span{margin-left: 8px;font-size: 16px;color: #D0CBC0;font-weight: 400;line-height: 100%;letter-spacing: 2.4px;text-transform: uppercase;font-family: "PP Supply Mono";vertical-align: top;}
 .scheduleSlider .swiper-slide .card .img{margin-top: 10px;}

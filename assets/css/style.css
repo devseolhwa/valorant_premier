@@ -197,6 +197,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 
 @media screen and (max-width: 1280px){
     .visualSection{height: 980px;}
+    .errorPage{background-size: contain;}
 }
 
 @-webkit-keyframes loading {

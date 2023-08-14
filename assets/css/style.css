@@ -195,6 +195,10 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .loading .spinner {position: absolute;top: 50%;left: 0;margin-top: -2.8125rem;border: 2px solid #C29E73;border-top: 2px solid transparent;border-bottom: 2px solid transparent;border-style: solid;position: relative;border-radius: 50%;width: 5.625rem;height: 5.625rem;margin-left: auto;margin-right: auto;-webkit-animation: loading 1s infinite linear;animation: loading 1s infinite linear;}
 .loading .spinner:after {content: "";position: absolute;width: 1.875rem;height: 1.875rem;border: 2px solid #C29E73;border-top: 2px solid transparent;border-bottom: 2px solid transparent;border-style: solid;margin: 0 auto;margin: 1.75rem;border-radius: 50%;-webkit-animation: loading2 1s infinite linear;animation: loading2 1s infinite linear;}
 
+@media screen and (max-width: 1280px){
+    .visualSection{height: 980px;}
+}
+
 @-webkit-keyframes loading {
     from {
         -webkit-transform: rotate(0deg);

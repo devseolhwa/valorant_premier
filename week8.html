@@ -70,11 +70,11 @@
 
         <div class="visualSection">
             <div class="visualBg">
-                <div class="visualLayer01" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)"></div>
-                <div class="visualLayer02" data-bottom-top="transform: translate3d(0,400px,0)" data-top-bottom="transform: translate3d(0,0,0)"></div>
-                <div class="visualLayer03" data-bottom-top="transform:translate3d(0,-350px,0)" data-top-bottom="transform:translate3d(0,250px,0)"></div>
-                <div class="visualLayer04" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)"></div>
-                <div class="visualLayer05" data-bottom-top="transform:translate3d(0,800px,0)" data-top-bottom="transform:translate3d(0,0,0)"></div>
+                <div class="visualLayer01" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_BG.jpg);"></div>
+                <div class="visualLayer02" data-bottom-top="transform: translate3d(0,400px,0)" data-top-bottom="transform: translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Pattern.png);"></div>
+                <div class="visualLayer03" data-bottom-top="transform:translate3d(0,-350px,0)" data-top-bottom="transform:translate3d(0,250px,0)" style="background-image: url(assets/images/Keyart_Premier.png);"></div>
+                <div class="visualLayer04" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Agent-Ground.png);"></div>
+                <div class="visualLayer05" data-bottom-top="transform:translate3d(0,800px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Rocks.png);"></div>
             </div><!-- visualBg end -->
             <div class="visualText">
                 <div class="textEffectHidden">
@@ -365,22 +365,25 @@
     <script>
         skrollr.init();
 
-        // week 케이스 보여주기 위한 소스 (추가할 필요X)
-        $(document).ready(function(){
+        // schedule Slider
+        let scheduleSliderCheck = $(".scheduleSlider");
+        if (scheduleSliderCheck.length) {
             var swiper = new Swiper(".scheduleSlider", {
                 loop: false,
                 slidesPerView: "auto", // 보여줄 개수
                 spaceBetween: 24, // 슬라이드 사이 여백
                 freeMode: false,
+                //slidesOffsetBefore: 640, // 첫번째 여백
+                //slidesOffsetAfter: 640, // 두번째 여백
                 allowTouchMove: true,
-                initialSlide: 7, // 시작 위치 (0부터 시작)
+                initialSlide: 8, // 시작 위치 (0부터 시작)
                 scrollbar : {
-                    el : '.swiper-scrollbar',
+                    el : ".swiper-scrollbar",
                     dragSize: 48,
                     draggable: true,
                 },
             });
-        });
+        }
     </script>
 
     <!-- 라이엇바 하단 -->

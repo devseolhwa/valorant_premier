@@ -51,11 +51,11 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 
 .visualSection{position: relative;height: calc(100vh - 80px);overflow: hidden;}
 .visualBg{position: relative;height: 100%;}
-.visualBg .visualLayer01{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-image: url(../images/Keyart_BG.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;}
-.visualBg .visualLayer02{position: absolute;top: -200px;left: 0;width: 100%;height: 980px;background-image: url(../images/Keyart_Pattern.png);background-position: center;background-size: cover;background-repeat: no-repeat;-webkit-animation: slowDown 5s ease;-moz-animation: slowDown 5s ease;-ms-animation: slowDown 5s ease;-o-animation: slowDown 5s ease;animation: slowDown 5s ease;}
-.visualBg .visualLayer03{position: absolute;top: 0;right: 0;width: 100%;height: 100%;background-image: url(../images/Keyart_Premier.png);background-position: center top;background-size: auto;background-repeat: no-repeat;-webkit-animation: fade 2s ease-in-out both;-moz-animation: fade 2s ease-in-out both;-ms-keyframes: fade 2s ease-in-out both;-o-animation: fade 2s ease-in-out both;animation: fade 2s ease-in-out both;}
-.visualBg .visualLayer04{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-image: url(../images/Keyart_Agent-Ground.png);background-position: center;background-size: cover;background-repeat: no-repeat;}
-.visualBg .visualLayer05{position: absolute;bottom: 350px;left: 50%;width: 1570px;height: 349px;margin-left: -785px;background-image: url(../images/Keyart_Rocks.png);background-position: center;background-size: auto;background-repeat: no-repeat;}
+.visualBg .visualLayer01{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.visualBg .visualLayer02{position: absolute;top: -200px;left: 0;width: 100%;height: 980px;background-position: center;background-size: cover;background-repeat: no-repeat;-webkit-animation: slowDown 5s ease;-moz-animation: slowDown 5s ease;-ms-animation: slowDown 5s ease;-o-animation: slowDown 5s ease;animation: slowDown 5s ease;}
+.visualBg .visualLayer03{position: absolute;top: 0;right: 0;width: 100%;height: 100%;background-position: center top;background-size: auto;background-repeat: no-repeat;-webkit-animation: fade 2s ease-in-out both;-moz-animation: fade 2s ease-in-out both;-ms-keyframes: fade 2s ease-in-out both;-o-animation: fade 2s ease-in-out both;animation: fade 2s ease-in-out both;}
+.visualBg .visualLayer04{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.visualBg .visualLayer05{position: absolute;bottom: 350px;left: 50%;width: 1570px;height: 349px;margin-left: -785px;background-position: center;background-size: auto;background-repeat: no-repeat;}
 .visualText{position: absolute;top: calc(50% - 80px);left: 50%;transform: translateX(-50%);width: 100%;text-align: center;}
 .visualText h2{font-size: 105px;color: #D0CBC0;font-weight: 400;line-height: 100%;letter-spacing: -2.1px;font-family: "Black Han Sans";text-align: center;}
 .visualText strong{display: block;margin-top: 15px;font-size: 24px;color: #DBDBDB;font-weight: 700;line-height: 100%;letter-spacing: 4.8px;font-family: "PP Supply Mono";text-align: center;text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);}
@@ -318,7 +318,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 
 @-webkit-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #74ffc9;
+        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
@@ -326,7 +326,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 }
 @-moz-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #74ffc9;
+        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
@@ -334,7 +334,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 }
 @-ms-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #74ffc9;
+        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
@@ -342,7 +342,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 }
 @-o-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #74ffc9;
+        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;

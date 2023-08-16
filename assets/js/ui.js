@@ -40,26 +40,6 @@ $(document).ready(function(){
             });
         });
     }
-    
-    // schedule Slider
-    let scheduleSliderCheck = $(".scheduleSlider");
-    if (scheduleSliderCheck.length) {
-        var swiper = new Swiper(".scheduleSlider", {
-            loop: false,
-            slidesPerView: "auto", // 보여줄 개수
-            spaceBetween: 24, // 슬라이드 사이 여백
-            freeMode: false,
-            //slidesOffsetBefore: 640, // 첫번째 여백
-            //slidesOffsetAfter: 640, // 두번째 여백
-            allowTouchMove: true,
-            initialSlide: 0, // 시작 위치 (0부터 시작)
-            scrollbar : {
-                el : '.swiper-scrollbar',
-                dragSize: 48,
-                draggable: true,
-            },
-        });
-    }
 });
 
 // 진입시 .start 추가

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <title>발로란트 프리미어</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+
+    <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lib/skrollr.min.js"></script>
+    <script src="assets/js/ScrambleTextPlugin.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/popup.js"></script>
+    
+</head>
+<body>
+
+    <!-- 라이엇바 상단 -->
+    <header id="riotbar-header"></header>
+    <header id="top-menu"></header>
+
+    <div class="wrap">
+        <a href="#leftmenu" id="btnMenuOpen"><span>메뉴열기</span></a>
+        <div id="leftmenu">
+            <h4>// 발로란트 공식 채널</h4>
+            <div class="channelGroup">
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel01.svg" alt="발로란트 채널"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel02.svg" alt="발로란트 유튜브"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel03.svg" alt="발로란트 인스타그램"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel04.svg" alt="발로란트 페이스북"></a>
+            </div>
+            <h4>// 진행 중인 이벤트</h4>
+            <ul class="bannerGroup">
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner01.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">VAL조각 이벤트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner02.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">사이VAL대학교</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner01.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">VAL조각 이벤트</p>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" id="btnMenuclose">메뉴닫기</button>
+        </div><!-- leftmenu end -->
+
+        <div class="floating">
+            <a href="#">
+                <img src="assets/images/icon_discode.svg" alt="">
+                <p>디스코드에서<br />팀원/스크림 찾기</p>
+            </a>
+        </div>
+
+        <div class="visualSection">
+            <div class="visualBg">
+                <div class="visualLayer01" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_BG.jpg);"></div>
+                <div class="visualLayer02" data-bottom-top="transform: translate3d(0,400px,0)" data-top-bottom="transform: translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Pattern.png);"></div>
+                <div class="visualLayer03" data-bottom-top="transform:translate3d(0,-350px,0)" data-top-bottom="transform:translate3d(0,250px,0)" style="background-image: url(assets/images/Keyart_Premier.png);"></div>
+                <div class="visualLayer04" data-bottom-top="transform:translate3d(0,220px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Agent-Ground.png);"></div>
+                <div class="visualLayer05" data-bottom-top="transform:translate3d(0,800px,0)" data-top-bottom="transform:translate3d(0,0,0)" style="background-image: url(assets/images/Keyart_Rocks.png);"></div>
+            </div><!-- visualBg end -->
+            <div class="visualText">
+                <div class="textEffectHidden">
+                    <h2 class="textEffect">공식 런칭 이벤트</h2>
+                </div>
+                <strong>2023/08/30 - 2023/10/01</strong>
+                <p>우리들만의 특별한 팀으로, <br />프리미어에서 추억도 쌓고, 굿즈도 받자!</p>
+                <div class="btnLineTop">
+                    <div class="btnLineBottom">
+                        <button type="button" class="btnEventJoin">
+                            <span class="bgHover"></span>
+                            <span>이벤트 참여하기</span>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- visualText end -->
+            <button type="button" id="btnEventSharing">이벤트 공유하기</button>
+            <button type="button" id="btnEventNotice">이벤트 유의사항</button>
+        </div><!-- visualSection end -->
+
+        <div class="successSection">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <div class="left">
+                            <span>// 01.</span>
+                            <div>프리미어 주간 대전<br />참가하면</div>
+                        </div>
+                        <div class="right">
+                            <span>// radianite-points</span>
+                            <div>
+                                <div class="textEffectHidden">
+                                    <p class="textEffect">레디어나이트 포인트</p>
+                                </div>
+                                <div class="textEffectHidden">
+                                    <p class="textEffect colorBronze">100% 획득 !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span>// 02.</span>
+                            <div>모든 미션을<br /> 완료하면</div>
+                        </div>
+                        <div class="right">
+                            <span>// radianite-points</span>
+                            <div>
+                                <div class="textEffectHidden">
+                                    <p class="textEffect">프리미어 팀 굿즈</p>
+                                </div>
+                                <div class="textEffectHidden">
+                                    <p class="textEffect colorBronze">
+                                        <em><img src="assets/images/img_Goods_sm.png" alt=""></em>응모 기회 !
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- inner end -->
+        </div><!-- successSection end -->
+
+        <div class="scheduleSection">
+            <div class="scheduleBg"></div>
+            <div class="scheduleTitle">
+                <h3>SCHEDULE</h3>
+                <p>프리미어 주간 대전 운영 시간 // 20:00 - 21:00 GTM+9</p>
+                <div class="btngroup">
+                    <button type="button" class="btnUrlcopy">즐겨찾기 URL 복사</button>
+                    <button type="button" class="btnCalendar">캘린더 보기</button>
+                </div>
+            </div>
+            <div class="scheduleSlider">
+                <div class="swiper-wrapper">
+                    <!-- [전달사항] .swiper-slide에 .on/.off 로 스타일 조정  -->
+                    <div class="swiper-slide ItemFirst off">
+                        <p class="week">WEEK 0</p>
+                        <!-- [전달사항] D-0일 경우 p태그 .zero 추가 -->
+                        <div class="card">
+                            <strong>팀 등록<p class="zero">D-0</p></strong>
+                            <p>08/30(수) - 09/05(화)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 1</p>
+                        <div class="card">
+                            <p class="title">헤이븐<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week1.png" alt="헤이븐MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 2</p>
+                        <div class="card">
+                            <p class="title">브리즈<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week2.png" alt="브리즈 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 3</p>
+                        <div class="card">
+                            <p class="title">로터스<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week3.png" alt="로터스 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 4</p>
+                        <div class="card">
+                            <p class="title">바인드<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week4.png" alt="바인드 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 5</p>
+                        <div class="card">
+                            <p class="title">어센트<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week5.png" alt="어센트 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide off">
+                        <p class="week">WEEK 6</p>
+                        <div class="card">
+                            <p class="title">스플릿<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week6.png" alt="스플릿 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide on">
+                        <p class="week">WEEK 7</p>
+                        <div class="card">
+                            <p class="title">선셋<span>MAP</span></p>
+                            <p class="img"><img src="assets/images/img_week7.png" alt="선셋 MAP"></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>
+                                    09/07(목)<br>
+                                    09/09(토)<br>
+                                    09/10(일)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ItemLast">
+                        <p class="week">WEEK 8</p>
+                        <div class="card">
+                            <p class="title">플레이<br>오프<span>// PLAYOFFS //</span></p>
+                            <ul>
+                                <li>대전</li>
+                                <li>09/07(목)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- swiper-wrapper end -->
+                <div class="scrollbar"><div class="swiper-scrollbar"></div></div>
+            </div><!-- scheduleSlider end -->
+        </div><!-- scheduleSection end -->
+
+        <div class="missionSection">
+            
+            <div class="inner">
+                <div class="scrollLeftBlack" data-bottom-top="transform: translate3d(0, 100px, 0)" data-top-bottom="transform: translate3d(0, -500px, 0)"></div>
+                <div class="scrollRightBlack" data-top-bottom="transform: translate3d(0, 100px, 0)" data-bottom-top="transform: translate3d(0, -700px, 0)"></div>
+                <div class="scrollRightBronze" data-top-bottom="transform: translate3d(0, 100px, 0)" data-bottom-top="transform: translate3d(0, -300px, 0)"></div>
+                <div class="missionTitle">
+                    <h3>MISSION</h3>
+                    <p>진행 기간 // WEEK 1 - WEEK 4</p>
+                    <button type="button" class="btnItemList">나의 보상 내역 확인하기</button>
+                </div>
+                <div class="missionList">
+                    <!-- 
+                        [전달사항] .missionItem 상태값 별 클래스 추가 
+                        보상 확인(기본) - .missionItem
+                        보상 받기 - .on
+                        보상 완료 - .off
+                        보상 마감 - .end
+                     -->
+                    <div class="missionItem">
+                        <p class="num"><span>Mission 01.</span><span>01 / 03</span></p>
+                        <p class="title">프리미어 팀<br>등록하기</p>
+                        <p class="img">
+                            <em>radianite points <br>x 10</em>
+                            <img src="assets/images/img_points10.png" alt="">
+                        </p>
+                        <!-- [전달사항] 버튼 상태값 (보상 확인/보상 받기/보상 획득 완료 !/보상 마감) -->
+                        <button type="button">보상 확인</button>
+                    </div>
+                    <div class="missionItem">
+                        <p class="num"><span>Mission 02.</span><span>02 / 03</span></p>
+                        <p class="title">주간 대전<br>1회 참여</p>
+                        <p class="img">
+                            <em>radianite points <br>x 10</em>
+                            <img src="assets/images/img_points10.png" alt="">
+                        </p>
+                        <!-- [전달사항] 버튼 상태값 (보상 확인/보상 받기/보상 획득 완료 !/보상 마감) -->
+                        <button type="button">보상 확인</button>
+                    </div>
+                    <div class="missionItem">
+                        <p class="num"><span>Mission 03.</span><span>03 / 03</span></p>
+                        <p class="title">주간 대전<br>1회 참여</p>
+                        <p class="img">
+                            <em>radianite points <br>x 10</em>
+                            <img src="assets/images/img_points10.png" alt="">
+                        </p>
+                        <!-- [전달사항] 버튼 상태값 (보상 확인/보상 받기/보상 획득 완료 !/보상 마감) -->
+                        <button type="button">보상 확인</button>
+                    </div>
+                </div><!-- missionList end -->
+                <!-- 
+                    [전달사항] .missionGoods 상태값 별 클래스 추가 
+                    응모하기(기본) - .missionGoods
+                    응모하기 - .on
+                    응모 마감 - .end
+                -->
+                <div class="missionGoods">
+                    <div class="goodsText">
+                        <span>모든 미션을 달성했다면?</span>
+                        <strong>프리미어 팀 굿즈에 <br>응모하세요.</strong>
+                        <p>
+                            내가 당첨되면 우리팀 모두가 당첨될 수 있는 기회!<br>
+                            프리미어 추억을 함께한 팀원들과 함께 응모하면<br>
+                            굿즈 당첨 확률이 높아집니다.
+                        </p>
+                        <!-- [전달사항] 버튼 상태값 (응모하기/응모 마감) -->
+                        <a href="#">응모하기</a>
+                    </div>
+                    <div class="goodsImg">
+                        <!-- [전달사항] 관리자 등록 이미지 -->
+                        <img src="assets/images/img_goods_lg.png" alt="">
+                        <p class="goodsName">
+                            프리미어 팀 굿즈<br>
+                            카드지갑&랜야드
+                            <em>10,000개</em>
+                        </p>
+                    </div>
+                </div><!-- missionGoods end -->
+            </div><!-- missionSection end -->
+        </div><!-- missionSection end -->
+
+    </div><!-- wrap end -->
+
+    <script>
+        skrollr.init();
+        
+        // schedule Slider
+        let scheduleSliderCheck = $(".scheduleSlider");
+        if (scheduleSliderCheck.length) {
+            var swiper = new Swiper(".scheduleSlider", {
+                loop: false,
+                slidesPerView: "auto", // 보여줄 개수
+                spaceBetween: 24, // 슬라이드 사이 여백
+                freeMode: false,
+                //slidesOffsetBefore: 640, // 첫번째 여백
+                //slidesOffsetAfter: 640, // 두번째 여백
+                allowTouchMove: true,
+                initialSlide: 7, // 시작 위치 (0부터 시작)
+                scrollbar : {
+                    el : ".swiper-scrollbar",
+                    dragSize: 48,
+                    draggable: true,
+                },
+            });
+        }
+    </script>
+
+    <!-- 라이엇바 하단 -->
+    <footer id="riotbar-footer"></footer>
+    <script defer="defer" src="https://cdn.rgpub.io/public/live/riotbar/latest/kr-valorant-evergreen.ko_KR.js"></script><!-- 라이엇바 상하단 js -->
+    
+</body>
+</html>

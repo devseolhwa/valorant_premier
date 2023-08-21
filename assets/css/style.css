@@ -53,7 +53,16 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .visualBg{position: relative;height: 100%;}
 .visualBg .visualLayer01{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-position: center;background-size: cover;background-repeat: no-repeat;}
 .visualBg .visualLayer02{position: absolute;top: -200px;left: 0;width: 100%;height: 980px;background-position: center;background-size: cover;background-repeat: no-repeat;-webkit-animation: slowDown 5s ease;-moz-animation: slowDown 5s ease;-ms-animation: slowDown 5s ease;-o-animation: slowDown 5s ease;animation: slowDown 5s ease;}
+.visualBg .visualLayer03{position: absolute;top: 0;right: 0; left: 50%;margin-left: -40%;width: 80%;height: 80%;background-position: center center;background-size: contain; background-position-y: 0;background-repeat: no-repeat;-webkit-animation: fade 2s ease-in-out both;-moz-animation: fade 2s ease-in-out both;-ms-keyframes: fade 2s ease-in-out both;-o-animation: fade 2s ease-in-out both;animation: fade 2s ease-in-out both;}
+/*기존 소스
+  프리미어 타이틀 영역이 가변으로 보여졌으면 좋겠다는 피드백 받아서 기존 소스 주석 처리 후 56줄에 수정 본 반영
+  해상도에 따라 겹치는 문제 관련 보고 드렸음
+       -> 가로 크기만 맞추는 게 아니라 세로 크기도 고려
+       -> 세로 크기를 고려할 경우 가로 크기에서 맞추기 난해함
+       -> 기존에 없던 큰 해상도에서 크기 문제가 발생
+       =  위 사항들이 문제가 있는 거 알고 있으나, 일반적인 시선에서 봤을땐 현재 가변형 구조가 보기 좋다는 의견으로 일단 진행하되, 추후 기존 처럼 고정형 사이즈로 원복 될 수 있음.
 .visualBg .visualLayer03{position: absolute;top: 0;right: 0;width: 100%;height: 100%;background-position: center top;background-size: auto;background-repeat: no-repeat;-webkit-animation: fade 2s ease-in-out both;-moz-animation: fade 2s ease-in-out both;-ms-keyframes: fade 2s ease-in-out both;-o-animation: fade 2s ease-in-out both;animation: fade 2s ease-in-out both;}
+*/
 .visualBg .visualLayer04{position: absolute;top: -130px;right: 0;width: 100%;height: 115%;background-position: center;background-size: cover;background-repeat: no-repeat;}
 .visualBg .visualLayer05{position: absolute;bottom: 350px;left: 50%;width: 1570px;height: 349px;margin-left: -785px;background-position: center;background-size: auto;background-repeat: no-repeat;}
 .visualText{position: absolute;top: calc(50% - 80px);left: 50%;transform: translateX(-50%);width: 100%;text-align: center;}
@@ -105,7 +114,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .scheduleSlider .swiper-slide .week{position: relative;margin-bottom: 19px;font-size: 24px;color: #C29E73;font-weight: 700;line-height: 160%;letter-spacing: 4.8px;text-transform: uppercase;font-family: "PP Supply Mono";text-align: center;}
 .scheduleSlider .swiper-slide + .swiper-slide .week:before{content: "";position: absolute;left: -86px;top: 13px;width: 156px;height: 4px;background: #856B4D;}
 .scheduleSlider .swiper-slide .card{position: relative;width: 302px;height: 414px;padding: 0 29px 23px;border: 1px solid #C29E73;box-sizing: border-box;background: rgba(0, 0, 0, 0.40);backdrop-filter: blur(7.5px);-webkit-backdrop-filter: blur(7.5px);}
-.scheduleSlider .swiper-slide .card .title{padding-top: 24px;border-top: 7px solid #C29E73;box-sizing: border-box;font-size: 60px;color: #C29E73;font-weight: 400;line-height: 100%;font-family: "Black Han Sans";}
+.scheduleSlider .swiper-slide .card .title{padding-top: 24px;border-top: 7px solid #C29E73;box-sizing: border-box;font-size: 60px;color: #C29E73;font-weight: 400;line-height: 100%;font-family: "Black Han Sans"; cursor: default;}
 .scheduleSlider .swiper-slide .card .title span{margin-left: 8px;font-size: 16px;color: #D0CBC0;font-weight: 400;line-height: 100%;letter-spacing: 2.4px;text-transform: uppercase;font-family: "PP Supply Mono";vertical-align: top;}
 .scheduleSlider .swiper-slide .card .img{margin-top: 10px;}
 .scheduleSlider .swiper-slide .card ul{display: flex;justify-content: space-between;align-items: flex-start;padding-top: 13px;margin-top: 20px;border-top: 3px solid #C29E73;box-sizing: border-box;}
@@ -211,6 +220,16 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 @media screen and (max-width: 1280px){
     .visualSection{height: 980px;}
     .errorPage{background-size: contain;}
+
+    /*기존 소스
+        프리미어 타이틀 영역이 가변으로 보여졌으면 좋겠다는 피드백 받아서 기존 소스 주석 처리 후 56줄에 수정 본 반영
+        해상도에 따라 겹치는 문제 관련 보고 드렸음
+            -> 가로 크기만 맞추는 게 아니라 세로 크기도 고려
+            -> 세로 크기를 고려할 경우 가로 크기에서 맞추기 난해함
+            -> 기존에 없던 큰 해상도에서 크기 문제가 발생
+            =  위 사항들이 문제가 있는 거 알고 있으나, 일반적인 시선에서 봤을땐 현재 가변형 구조가 보기 좋다는 의견으로 일단 진행하되, 추후 기존 처럼 고정형 사이즈로 원복 될 수 있음.
+    */
+    .visualBg .visualLayer03{background-size: auto; background-position-y: 100px; width: 100%; height: 100%; left: 0; margin-left: 0;}
 }
 
 @-webkit-keyframes loading {

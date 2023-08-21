@@ -122,7 +122,9 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .scheduleSlider .swiper-slide.ItemLast .card .title span{display: block;margin-left: 0;margin-top: 7px;color: #C29E73;line-height: 140%;letter-spacing: 0.8px;}
 .scheduleSlider .swiper-slide.ItemLast .card strong{display: flex;justify-content: center;align-items: center;flex-direction: column;width: 100%;height: 100%;font-size: 70px;color: #C29E73;font-weight: 400;line-height: 100%;letter-spacing: -1.4px;font-family: "Black Han Sans";text-align: center;}
 .scheduleSlider .swiper-slide.ItemLast .card strong p{margin-top: 5px;color: #7DFAC9;font-family: "PP Monument Extended";font-size: 50px;font-weight: 700;line-height: 100%;}
-.scheduleSlider .swiper-slide.on .week{color: #7DFAC9;-webkit-animation: weekNeon 1.5s ease-in-out infinite alternate;-moz-animation: weekNeon 1.5s ease-in-out infinite alternate;-ms-animation: weekNeon 1.5s ease-in-out infinite alternate;-o-animation: weekNeon 1.5s ease-in-out infinite alternate;animation: weekNeon 1.5s ease-in-out infinite alternate;}
+/* 20230816 start */
+.scheduleSlider .swiper-slide.on .week{color: #7DFAC9;-webkit-animation: weekNeon 1.1s ease-in-out infinite alternate;-moz-animation: weekNeon 1.1s ease-in-out infinite alternate;-ms-animation: weekNeon 1.1s ease-in-out infinite alternate;-o-animation: weekNeon 1.1s ease-in-out infinite alternate;animation: weekNeon 1.1s ease-in-out infinite alternate;}
+/* 20230816 end */
 .scheduleSlider .swiper-slide.off .week{color: #848B89;}
 .scheduleSlider .swiper-slide.off .card{opacity: 0.4;}
 .scrollbar{position: relative;width: 384px;height: 8px;margin: 60px auto 0;}
@@ -154,12 +156,23 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .missionList .missionItem button{display: block;width: 100%;padding: 20px 40px;margin-top: 15px;background: #C29E73;box-shadow: 0px 0px 20px 0px rgba(206, 160, 105, 0.80);box-sizing: border-box;font-size: 24px;color: #121212;font-weight: 700;line-height: 100%;letter-spacing: 2.4px;text-align: center;-webkit-transition: .5s;transition: .5s;}
 .missionList .missionItem button:after{content: "";display: inline-block;width: 21px;height: 23px;margin-left: 23px;background-image: url(../images/arr_entry_black.svg);background-repeat: no-repeat;vertical-align: -3px;}
 .missionList .missionItem.on button{-webkit-animation: missionNeon 1.5s ease-in-out infinite alternate;-moz-animation: missionNeon 1.5s ease-in-out infinite alternate;-ms-animation: missionNeon 1.5s ease-in-out infinite alternate;-o-animation: missionNeon 1.5s ease-in-out infinite alternate;animation: missionNeon 1.5s ease-in-out infinite alternate;}
-.missionList .missionItem.on:hover{border-color: #C29E73;background: #2E3030;}
-.missionList .missionItem.on:hover button{background: #D0CBC0;}
+/* 20230816 start */
+/* .missionList .missionItem.on:hover{border-color: #C29E73;background: #2E3030;}
+.missionList .missionItem.on:hover button{background: #D0CBC0;} */
+/* 20230816 end */
 .missionList .missionItem.off .num, .missionList .missionItem.off .title, .missionList .missionItem.off .img, .missionList .missionItem.end .num, .missionList .missionItem.end .title, .missionList .missionItem.end .img{opacity: 0.5;}
 .missionList .missionItem.off button{background: #2E3030;box-shadow: none;color: #C29E73;cursor: inherit;}
 .missionList .missionItem.end button{background: #2E3030;box-shadow: none;color: #585858;cursor: inherit;}
 .missionList .missionItem.off button:after, .missionList .missionItem.end button:after{display: none;}
+/* 20230816 start */
+.missionList .missionItem:hover{border-color: #C29E73;background: #2E3030;}
+.missionList .missionItem:hover button{background: #D0CBC0;}
+.missionList .missionItem.off:hover{border-color: #848B89;background: #121212;}
+.missionList .missionItem.off:hover button{background: #2E3030;}
+.missionList .missionItem.end:hover{border-color: #848B89;background: #121212;}
+.missionList .missionItem.end:hover button{background: #2E3030;}
+/* 20230816 end */
+
 .missionGoods{position: relative;width: 100%;height: 480px;background-image: url(../images/bg_goods.png);background-position: center;background-size: cover;background-repeat: no-repeat;}
 .missionGoods .goodsText{position: relative;width: 724px;padding: 75px 0 0;box-sizing: border-box;text-align: center;z-index: 1;}
 .missionGoods .goodsText span{font-size: 24px;color: #2E3030;font-weight: 800;line-height: 100%;letter-spacing: 3.6px;}
@@ -315,48 +328,48 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     0%{right: -221px;}
     100% {right: 0;}
 }
-
+/* 20230816 start */
 @-webkit-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
+        text-shadow: 0 0 5px transparent, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
+        text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
     }
 }
 @-moz-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
+        text-shadow: 0 0 5px transparent, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
+        text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
     }
 }
 @-ms-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
+        text-shadow: 0 0 5px transparent, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
+        text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
     }
 }
 @-o-keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
+        text-shadow: 0 0 5px transparent, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
+        text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
     }
 }
 @keyframes weekNeon {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
+        text-shadow: 0 0 5px transparent, 0 0 10px #7DFAC9, 0 0 20px #7DFAC9, 0 0 30px #7DFAC9, 0 0 35px #7DFAC9, 0 0 40px #74ffc9;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
+        text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 35px #7DFAC9, 0 0 40px #7DFAC9, 0 0 50px #7DFAC9, 0 0 80px #74ffc9;
     }
 }
-
+/* 20230816 end */
 @-webkit-keyframes missionNeon {
     from {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 1), 0 0 5px 0 rgba(206, 160, 105, 0.80), 0 0 10px 0 rgba(206, 160, 105, 1), 0 0 20px 0 rgba(206, 160, 105, 1);
